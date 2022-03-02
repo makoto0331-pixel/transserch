@@ -1,0 +1,41 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja-jp">
+<head>
+        <link rel="stylesheet" href="{% static 'css/test.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/search.css'}">
+</head>
+    <body>
+        <div class="navigaton-ver">
+
+
+            <div id="Web_1920__7" style="transform-origin: 0px 0px;"></div>
+            
+            <header>
+            <img class="site-logo" src="{% static 'logos/logo.png' %}">
+            
+            <nav>
+                <ul class="header_list">
+                    <li><a href="http://127.0.0.1:8000/">Home</a></li>
+                    <li><a href="http://127.0.0.1:8000/test">乗換詳細検索</a></li>
+                    <li><a herf="#">予約</a></li>
+                    <li><a herf="#">混雑状況</a></li>
+                    <li><a herf="#">ログイン</a></li>
+                </ul>
+            </nav>
+            <p>{{accept}}</p>
+        <div class="transform">
+            <p style="text-align: center;" >乗換詳細検索</p>
+            <form  style="text-align: center;"      method="POST" id="form1" action="{% url 'transport:search' %}">{% csrf_token %}
+
+                <input id="sboxd" id="syupatsu" name="depurture" type=text placeholder="乗車駅を入力"/>
+                <input id="sboxv" id="keiyu" name="via" type=text placeholder="経由地を入力"/>
+                <input id="sboxf" id="mokutekiti" name="destination" type=text placeholder="下車駅を入力"/>
+                <input  id="sbtn2" type = "submit"  value="検索">
+            </form>
+        </div>  
+     </body>
+</html>

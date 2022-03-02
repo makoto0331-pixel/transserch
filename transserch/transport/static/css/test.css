@@ -1,0 +1,38 @@
+header{
+	width: 100%;
+	
+}
+
+
+
+ul {
+    display: flex; /* 要素の配置の設定 */
+    flex-direction: row; /* 要素を横並びにする */
+    justify-content: space-evenly; /* いい感じに等間隔にする */
+    background-color: #eaf4fc;
+    padding: 8px 0px;
+    list-style: none; /* リスト要素の・を消す */
+  }
+
+.header_list{
+	display: flex-cell;
+	vertical-align:　middle ;
+	border-right: 1px solid #fff;
+	word-wrap: break-word;
+	width: 100%;
+	margin:  8px;
+	color:blue;
+	font-size: 30px;
+}
+
+.site-logo{
+
+	width: 607px;
+	/* height: 172px; */
+
+}
+
+
+
+
+
